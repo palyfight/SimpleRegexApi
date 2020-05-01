@@ -1,0 +1,25 @@
+import Patterns.*;
+
+public class PatternFactory {
+    /**
+     *
+     * @param patternType
+     * @return RegexPattern instance
+     */
+    public RegexPattern getPattern(PatternType patternType) {
+        if(patternType == null){
+            throw new IllegalArgumentException("patternType is null");
+        }
+        if(patternType.equals(PatternType.IPV4)) {
+            return new IPV4Pattern();
+
+        } else if(patternType.equals(PatternType.IPV6)) {
+            return new IPV6Pattern();
+
+        } else if(patternType.equals(PatternType.EMAIL)) {
+            return new EmailPattern();
+        }
+
+        throw new UnsupportedOperationException(String.format("Pattern %s is not supported", patternType));
+    }
+}
