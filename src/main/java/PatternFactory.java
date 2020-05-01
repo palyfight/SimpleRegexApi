@@ -3,7 +3,7 @@ import Patterns.*;
 public class PatternFactory {
     /**
      *
-     * @param patternType
+     * @param patternType the PatternType object you'd like to instantiate
      * @return RegexPattern instance
      */
     public RegexPattern getPattern(PatternType patternType) {
