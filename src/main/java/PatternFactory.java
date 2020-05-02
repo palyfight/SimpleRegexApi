@@ -20,6 +20,6 @@ public class PatternFactory {
             return new EmailPattern();
         }
 
-        throw new UnsupportedOperationException(String.format("Pattern %s is not supported", patternType));
+        return null;
     }
 }
