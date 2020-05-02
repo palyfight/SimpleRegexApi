@@ -36,3 +36,4 @@ public class PatterFactoryTest {
         assertTrue(rp instanceof EmailPattern);
     }
 }
+
