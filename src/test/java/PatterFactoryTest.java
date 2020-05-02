@@ -9,7 +9,7 @@ public class PatterFactoryTest {
     @Test
     public void testNullPatternType() {
         PatternFactory pf = new PatternFactory();
-        assertThrows( IllegalArgumentException.class, () -> pf.getPattern(null));
+        assertThrows( IllegalArgumentException.class, () -> pf.getPattern(null), "patternType is null");
     }
 
     @Test
