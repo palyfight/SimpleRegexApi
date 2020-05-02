@@ -6,7 +6,32 @@
 
     <groupId>com.github.palyfight</groupId>
     <artifactId>SimpleRegexApi</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <name>SimpleRegexApi</name>
+    <description>A simple java api to handle the most common regex patterns</description>
+    <url>https://github.com/palyfight/SimpleRegexApi</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Christian Bamatembera</name>
+            <email>chrisbama92@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/palyfight/SimpleRegexApi.git</connection>
+        <developerConnection>scm:git:ssh://github.com:palyfight/SimpleRegexApi.git</developerConnection>
+        <url>http://github.com/palyfight/SimpleRegexApi/tree/master</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
