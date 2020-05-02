@@ -28,5 +28,9 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     - name: Run the Maven verify phase      # test
       run: mvn -B verify --file pom.xml
+    - name: Coveralls GitHub Action         # send lcov file to coveralls.io for analysis
+      uses: coverallsapp/github-action@v1.1.1
+      with:
+        github-token: ${{ secrets.repo_token }}
     - name: Build with Maven                # build
       run: mvn -B package --file pom.xml
