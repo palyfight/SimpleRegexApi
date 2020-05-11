@@ -1,3 +1,4 @@
+import Patterns.PatternFactory;
 import Patterns.PatternType;
 import Patterns.RegexPattern;
 import org.junit.jupiter.api.Test;

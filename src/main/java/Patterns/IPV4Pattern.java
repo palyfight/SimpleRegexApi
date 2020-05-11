@@ -11,6 +11,8 @@ import java.util.regex.Pattern;
 public class IPV4Pattern implements RegexPattern {
     private static final String IPV4_PATTERN = "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)";
 
+    protected IPV4Pattern(){};
+
     @Override
     public List<String> match(String s) {
         Pattern pattern = Pattern.compile(IPV4_PATTERN);
