@@ -32,6 +32,6 @@ jobs:
       - name: Package build                   # package
         run: mkdir staging && cp target/*.jar staging
         uses: actions/upload-artifact@v1
-          with:
-            name: Package
-            path: staging
+        with:
+          name: Package
+          path: staging
