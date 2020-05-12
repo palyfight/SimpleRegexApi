@@ -33,9 +33,10 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
     - name: Build with Maven                # build
       run: mvn -B package --file pom.xml
-    - name: Package build                   # package
+    - name: Create directory                # create directory
       run: mkdir master && cp target/*.jar master
-    - uses: actions/upload-artifact@v1
+    - name: Package build                   # package artifacts
+      uses: actions/upload-artifact@v1
       with:
         name: Package
         path: master
