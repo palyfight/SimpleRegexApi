@@ -29,9 +29,3 @@ jobs:
         run: mvn -B verify --file pom.xml
       - name: Build with Maven                # build
         run: mvn -B package --file pom.xml
-      - name: Package build artifacts         # package artifacts
-        run: mkdir staging && cp target/*.jar staging
-      - uses: actions/upload-artifact@v1
-        with:
-          name: Package
-          path: staging
