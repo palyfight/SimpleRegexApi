@@ -1,4 +1,4 @@
-import Patterns.*;
+package Patterns;
 
 public class PatternFactory {
     /**
