@@ -4,7 +4,7 @@
 name: Java CI with Maven
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
@@ -39,4 +39,4 @@ jobs:
       - name: Publish package to github packages
         run: mvn -B deploy
         env:
-          GITHuB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHuB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
