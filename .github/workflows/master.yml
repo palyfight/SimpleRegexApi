@@ -31,11 +31,11 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
     - name: Build with Maven                # build
       run: mvn -B package --file pom.xml
-    - run: mkdir master && cp target/*.jar master
-    - uses: actions/upload-artifact@v1
-      with:
-        name: Package
-        path: master
+    #- run: mkdir master && cp target/*.jar master
+    #- uses: actions/upload-artifact@v1
+    #  with:
+    #    name: Package
+    #    path: master
     - name: Publish package to github packages
       run: mvn -B deploy
       env:
