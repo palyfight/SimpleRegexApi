@@ -37,6 +37,8 @@ jobs:
           name: Package
           path: master
       - name: Publish package to github packages
-        run: mvn -B deploy
+        run: mvn -B -X deploy
         env:
-          GITHuB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+          MAVEN_USERNAME: ${{ secrets.PACKAGE_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.PACKAGE_TOKEN }}
+          #GITHuB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
