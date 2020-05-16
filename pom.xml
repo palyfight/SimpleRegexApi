@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>SimpleRegexApi</name>
-    <description>A simple java api to handle the most common regex patterns</description>
+    <description>A simple java api to handle common regex patterns</description>
     <url>https://github.com/palyfight/SimpleRegexApi</url>
 
     <licenses>
@@ -45,13 +45,13 @@
     </properties>
 
     <!-- PUBLISH TO GITHUB -->
-    <distributionManagement>
+    <!--<distributionManagement>
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
             <url>https://maven.pkg.github.com/palyfight/SimpleRegexApi</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 
     <dependencies>
         <dependency>
