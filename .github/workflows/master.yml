@@ -42,7 +42,6 @@ jobs:
           name: Package
           path: master
       - name: Publish package to github packages
-        run: mvn -B deploy
+        run: mvn deploy -Dregistry=https://maven.pkg.github.com/palyfight -Dtoken=$GH_TOKEN
         env:
-          MAVEN_USERNAME: ${{ secrets.PACKAGE_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.PACKAGE_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
