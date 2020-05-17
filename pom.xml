@@ -41,6 +41,7 @@
         <!-- SonarCloud -->
         <sonar.java.libraries>${project.build.directory}/*.jar</sonar.java.libraries>
         <sonar.java.binaries>${project.build.directory}/classes</sonar.java.binaries>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
     <!-- PUBLISH TO GITHUB -->
@@ -95,7 +96,7 @@
                     <!-- attached to Maven test phase -->
                     <execution>
                         <id>report</id>
-                        <phase>test</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
