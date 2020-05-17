@@ -49,7 +49,7 @@ jobs:
       - name: Download artifacts from test job
         uses: actions/download-artifact@v1
         with:
-          - name: Package
+          name: Package
       - name: SonarCloud Scan
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=palyfight_SimpleRegexApi -Dsonar.organization=palyfight -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
         env:
