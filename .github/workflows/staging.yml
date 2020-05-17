@@ -44,7 +44,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2             # checkout code
         with:
-          fetch-depth: 0
+          fetch-depth: ''
       - run: git fetch --prune --unshallow --quiet
       #- run: git fetch --unshallow --quiet
       - name: Set up JDK 1.8
