@@ -40,6 +40,7 @@
         <junit.jupiter.version>5.6.2</junit.jupiter.version>
         <!-- SonarCloud -->
         <sonar.java.libraries>${project.build.directory}/*.jar</sonar.java.libraries>
+        <sonar.java.binaries>${project.build.directory}/classes</sonar.java.binaries>
     </properties>
 
     <!-- PUBLISH TO GITHUB -->
