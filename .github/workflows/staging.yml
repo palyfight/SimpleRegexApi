@@ -56,7 +56,7 @@ jobs:
       #  with:
       #    name: Package
       - name: SonarCloud Scan
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=palyfight_SimpleRegexApi -Dsonar.organization=palyfight -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+        run: mvn -B verify --file pom.xml sonar:sonar -Dsonar.projectKey=palyfight_SimpleRegexApi -Dsonar.organization=palyfight -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
