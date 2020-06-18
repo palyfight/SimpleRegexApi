@@ -1,6 +1,6 @@
-import Patterns.PatternFactory;
-import Patterns.PatternType;
-import Patterns.RegexPattern;
+import patterns.PatternFactory;
+import patterns.PatternType;
+import patterns.RegexPattern;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;

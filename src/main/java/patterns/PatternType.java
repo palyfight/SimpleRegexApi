@@ -1,4 +1,4 @@
-package Patterns;
+package patterns;
 
 public enum PatternType {
     IPV4,
