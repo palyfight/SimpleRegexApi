@@ -139,7 +139,7 @@
                 <sonar.organization>palyfight</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
                 <sonar.java.libraries>target</sonar.java.libraries>
-                <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+                <!--<sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>-->
             </properties>
             <activation>
                 <activeByDefault>false</activeByDefault>
