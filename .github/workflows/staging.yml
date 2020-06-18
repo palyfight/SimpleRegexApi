@@ -56,6 +56,9 @@ jobs:
       #  uses: actions/download-artifact@v1
       #  with:
       #    name: Package
+      - name: Checking smthng
+        run: |
+          ls -al
       - name: SonarCloud Scan
         run: mvn verify -Psonar -Dsonar.login=${{ secrets.SONAR_TOKEN }} sonar:sonar --file pom.xml
         #run: mvn -B verify sonar:sonar -Dsonar.projectKey=palyfight_SimpleRegexApi -Dsonar.organization=palyfight -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
