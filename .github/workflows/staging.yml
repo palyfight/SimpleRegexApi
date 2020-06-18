@@ -56,6 +56,8 @@ jobs:
       #  uses: actions/download-artifact@v1
       #  with:
       #    name: Package
+      - name: Maven clean install
+        run: mvn clean install
       - name: Checking smthng
         run: |
           ls -al
