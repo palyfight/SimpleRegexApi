@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.palyfight</groupId>
-    <artifactId>SimpleRegexApi</artifactId>
+    <artifactId>simple-regex-api</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -27,14 +27,6 @@
         </developer>
     </developers>
 
-<!--    <scm>-->
-<!--        <connection>scm:git:git://github.com/palyfight/SimpleRegexApi.git</connection>-->
-<!--        <developerConnection>scm:git:ssh://github.com:palyfight/SimpleRegexApi.git</developerConnection>-->
-<!--        <url>http://github.com/palyfight/SimpleRegexApi/tree/main</url>-->
-<!--    </scm>-->
-<!--
-https://maven.pkg.github.com/palyfight/SimpleRegexApi/com/github/palyfight/SimpleRegexApi/1.0/SimpleRegexApi-1.0.jar
--->
     <!-- PUBLISH TO GITHUB -->
     <distributionManagement>
         <repository>
