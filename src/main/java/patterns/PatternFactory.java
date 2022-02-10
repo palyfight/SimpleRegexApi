@@ -1,5 +1,11 @@
 package patterns;
 
+import org.apache.commons.lang3.StringUtils;
+import patterns.impl.*;
+
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+
 public class PatternFactory {
     /**
      *
@@ -8,18 +14,39 @@ public class PatternFactory {
      */
     public RegexPattern getPattern(PatternType patternType) {
         if(patternType == null){
-            throw new IllegalArgumentException("patternType is null");
+            throw new UnsupportedPatternException("patternType is null");
         }
         if(patternType.equals(PatternType.IPV4)) {
             return new IPV4Pattern();
-
         } else if(patternType.equals(PatternType.IPV6)) {
             return new IPV6Pattern();
-
         } else if(patternType.equals(PatternType.EMAIL)) {
             return new EmailPattern();
+        } else if(patternType.equals(PatternType.INTL_PHONE)) {
+            return new IntlPhoneNumberPattern();
+        } else if(patternType.equals(PatternType.NA_PHONE)) {
+            return new NorthAmericanPhoneNumberPattern();
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @param customPattern
+     * @return RegexPattern instance
+     */
+    public RegexPattern getPattern(String customPattern) {
+        String errorMsg = String.format("Invalid pattern. Pattern provided was %s", customPattern);
+
+        if(StringUtils.isEmpty(customPattern))
+            throw new UnsupportedPatternException(errorMsg);
+
+        try {
+            Pattern.compile(customPattern);
+        } catch (PatternSyntaxException e) {
+            throw new UnsupportedPatternException(errorMsg, e);
         }
 
-        return null;
+        return new CustomPattern(customPattern);
     }
 }

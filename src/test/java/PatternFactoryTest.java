@@ -1,16 +1,14 @@
-import patterns.*;
 import org.junit.jupiter.api.Test;
+import patterns.PatternFactory;
+import patterns.PatternType;
+import patterns.RegexPattern;
+import patterns.impl.EmailPattern;
+import patterns.impl.IPV4Pattern;
+import patterns.impl.IPV6Pattern;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PatterFactoryTest {
-
-    @Test
-    public void testNullPatternType() {
-        PatternFactory pf = new PatternFactory();
-        assertThrows( IllegalArgumentException.class, () -> pf.getPattern(null), "patternType is null");
-    }
+public class PatternFactoryTest {
 
     @Test
     public void testIpv4PatternInstance() {
