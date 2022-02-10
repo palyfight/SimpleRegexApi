@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.palyfight</groupId>
-    <artifactId>SimpleRegexApi</artifactId>
+    <artifactId>simple-regex-api</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
