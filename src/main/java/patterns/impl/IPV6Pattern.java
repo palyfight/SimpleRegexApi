@@ -1,9 +1,4 @@
-package Patterns;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package patterns.impl;
 
 /**
  * Does not work in the following case:
@@ -17,21 +12,10 @@ import java.util.regex.Pattern;
  *
  * Does not support ipv6 addresses with a port number
  */
-public class IPV6Pattern implements RegexPattern {
+public class IPV6Pattern extends BasePattern {
     private static final String IPV6_PATTERN = "(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))";
 
-    protected IPV6Pattern(){};
-
-    @Override
-    public List<String> match(String s) {
-        Pattern pattern = Pattern.compile(IPV6_PATTERN);
-        Matcher matcher = pattern.matcher(s);
-        List<String> matches = new ArrayList<>();
-
-        while(matcher.find()) {
-            matches.add(matcher.group());
-        }
-
-        return matches;
+    public IPV6Pattern() {
+        super(IPV6_PATTERN);
     }
 }
