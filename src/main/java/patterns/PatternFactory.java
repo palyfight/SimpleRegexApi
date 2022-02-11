@@ -16,6 +16,7 @@ public class PatternFactory {
         if(patternType == null){
             throw new UnsupportedPatternException("patternType is null");
         }
+
         if(patternType.equals(PatternType.IPV4)) {
             return new IPV4Pattern();
         } else if(patternType.equals(PatternType.IPV6)) {
@@ -27,7 +28,8 @@ public class PatternFactory {
         } else if(patternType.equals(PatternType.NA_PHONE)) {
             return new NorthAmericanPhoneNumberPattern();
         }
-        return null;
+
+        throw new UnsupportedPatternException(String.format("Received unsupported patternType: %s", patternType));
     }
 
     /**
