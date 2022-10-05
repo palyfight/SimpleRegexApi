@@ -23,10 +23,6 @@ public class PatternFactory {
             return new IPV6Pattern();
         } else if(patternType.equals(PatternType.EMAIL)) {
             return new EmailPattern();
-        } else if(patternType.equals(PatternType.INTL_PHONE)) {
-            return new IntlPhoneNumberPattern();
-        } else if(patternType.equals(PatternType.NA_PHONE)) {
-            return new NorthAmericanPhoneNumberPattern();
         }
 
         throw new UnsupportedPatternException(String.format("Received unsupported patternType: %s", patternType));
