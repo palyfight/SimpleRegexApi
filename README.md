@@ -13,6 +13,11 @@ PatternFactory pf = new PatternFactory();
 RegexPattern rp = pf.getPattern(PatternType.ENUM);
 rp.match(your_string);
 ```
+- **[IPV4](https://raw.githubusercontent.com/palyfight/SimpleRegexApi/dev/src/main/java/patterns/impl/IPV4Pattern.java)**
+- **[IPV6](https://raw.githubusercontent.com/palyfight/SimpleRegexApi/dev/src/main/java/patterns/impl/IPV6Pattern.java)**
+- **[Email](https://raw.githubusercontent.com/palyfight/SimpleRegexApi/dev/src/main/java/patterns/impl/EmailPattern.java)**
+- **[Phone](https://raw.githubusercontent.com/palyfight/SimpleRegexApi/dev/src/main/java/patterns/impl/PhonePattern.java)**
+
 #### Custom pattern
 ```java
 PatternFactory pf = new PatternFactory();
