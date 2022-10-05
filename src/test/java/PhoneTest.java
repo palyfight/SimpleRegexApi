@@ -12,7 +12,7 @@ import patterns.PatternType;
 public class PhoneTest {
 
     @Test
-    public void testEmail() {
+    public void testPhone() {
         String testData = "foo 438 baz 8195555555";
 
         List<String> expectedMatches = new ArrayList<>();
