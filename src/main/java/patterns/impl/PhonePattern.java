@@ -16,13 +16,21 @@ public class PhonePattern implements RegexPattern {
 
     public PhonePattern() {}
 
+    public List<String> match(String s, String region) {
+        PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
+        Iterable<PhoneNumberMatch> phoneNumbersIter = phoneUtil.findNumbers(s, region);
+
+        return StreamSupport.stream(phoneNumbersIter.spliterator(), false).map(PhoneNumberMatch::rawString).collect(Collectors.toList());
+    }
+
+    /**
+     * finds matches only for canadian number. Use match(String s, String region) to specify which region to use
+     * @param s the String object from which to find matches
+     * @return a List<String> of all matches found
+     */
     @Override
     public List<String> match(String s) {
-        PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
-        Iterable<PhoneNumberMatch> phoneNumbersIter = phoneUtil.findNumbers(s, "CA");
-        List<String> results = StreamSupport.stream(phoneNumbersIter.spliterator(), false).map(phone -> phone.rawString()).collect(Collectors.toList());
-
-        return results;
+        return match(s, "CA");
     }
 
     @Override
